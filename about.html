@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <script src="https://kit.fontawesome.com/e4261c0b8f.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #e50914;
+            text-transform: uppercase;
+            animation: fadeInDown 1.5s ease;
+        }
+
+        .line {
+            width: 150px;
+            height: 3px;
+            background: #e50914;
+            margin: 10px auto;
+            animation: expand 1s ease forwards;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            animation: fadeInUp 2s ease;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 30px;
+            background: transparent;
+            color: #e50914;
+            border: 2px solid #e50914;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeInUp 2.5s ease;
+        }
+
+        .btn:hover {
+            background: #e50914;
+            color: #000;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        section h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #e50914;
+            animation: fadeInDown 1.5s ease;
+        }
+
+        .services, .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            animation: fadeInUp 2s ease;
+        }
+
+        .card {
+            background: #111;
+            color: #fff;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(229, 9, 20, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(229, 9, 20, 0.5);
+        }
+
+        .card h3 {
+            color: #e50914;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        #portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%; /* Fill the entire grid item */
+    border-radius: 10px;
+    display: block;
+    transition:transform 0.5s
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background:linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+.work:hover img{
+    transform:scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding:14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color:white;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+
+}
+#header {
+    width: 100%;
+    height: 100vh;
+    
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    z-index: 1;
+}
+
+#header .container {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+}
+
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin:10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size:18px;
+    position:relative;
+
+}
+nav ul li a::after{
+    content: '';
+    width:0;
+    height:3px;
+    background: #ff004f;
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    transition:0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+
+}
+.header-text h1{
+    font-size:60px;
+    margin-top: 20px;
+    
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+
+        /* Smooth Animations */
+        @keyframes fadeInDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes expand {
+            from { width: 0; }
+            to { width: 150px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+            </nav>
+    <div class="container">
+        <h1>Hello, I'm Yogeshwaran</h1>
+        <div class="line"></div>
+        <p>
+            I am a passionate cybersecurity student and web developer with a knack for creating engaging and responsive websites. 
+            My goal is to blend creativity with functionality to deliver impactful user experiences. 
+            I am dedicated to building scalable and secure solutions while continuously learning and improving my craft.
+        </p>
+        <button class="btn">Download My Resume</button>
+    </div>
+
+    <section id="services">
+        <h2>My Services</h2>
+        <div class="services">
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Custom websites crafted with modern design and responsive layouts for all devices.</p>
+            </div>
+            <div class="card">
+                <h3>UI/UX Design</h3>
+                <p>Creating seamless and user-friendly interfaces to enhance user experiences.</p>
+            </div>
+            <div class="card">
+                <h3>Cybersecurity Solutions</h3>
+                <p>Ensuring robust security for your applications and data with industry-best practices.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
